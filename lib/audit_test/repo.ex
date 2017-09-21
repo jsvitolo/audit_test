@@ -1,5 +1,6 @@
 defmodule AuditTest.Repo do
   use Ecto.Repo, otp_app: :audit_test
+  use AuditTest.Events.Repo
 
   @doc """
   Dynamically loads the repository url from the

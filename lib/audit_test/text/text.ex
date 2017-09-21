@@ -70,7 +70,8 @@ defmodule AuditTest.Text do
   def update_post(%Post{} = post, attrs) do
     post
     |> Post.changeset(attrs)
-    |> Repo.update()
+    # |> Repo.update()
+    |> Repo.audited_update(1)
   end
 
   @doc """
